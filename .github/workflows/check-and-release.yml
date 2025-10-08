@@ -60,7 +60,7 @@ jobs:
           TAG_NAME="v$(date +'%Y.%m.%d')-$(echo ${{ github.sha }} | cut -c1-7)"
           echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
       - name: Create release with artifacts
-        uses: softprops/action-gh-release@62c96d0c4e8a889135c1f3a25910db8dbe0e85f7 # v2.3.4
+        uses: softprops/action-gh-release@aec2ec56f94eb8180ceec724245f64ef008b89f5 # v2.4.0
         with:
           tag_name: ${{ steps.create_tag.outputs.tag_name }}
           name: Release ${{ steps.create_tag.outputs.tag_name }}
